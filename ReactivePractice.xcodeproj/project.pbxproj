@@ -17,6 +17,7 @@
 		6BBC8E9A26F1DA6900808D55 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E9926F1DA6900808D55 /* StockListView.swift */; };
 		6BBC8E9C26F1DC6A00808D55 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E9B26F1DC6A00808D55 /* Coordinator.swift */; };
 		6BBC8E9E26F1DCA500808D55 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E9D26F1DCA500808D55 /* CompositionRoot.swift */; };
+		6BBC8EA026F1E23C00808D55 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E9F26F1E23C00808D55 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6BBC8E9926F1DA6900808D55 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		6BBC8E9B26F1DC6A00808D55 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6BBC8E9D26F1DCA500808D55 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		6BBC8E9F26F1E23C00808D55 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				6BBC8E9B26F1DC6A00808D55 /* Coordinator.swift */,
+				6BBC8E9F26F1E23C00808D55 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				6BBC8E9626F1D9D900808D55 /* StockListController.swift in Sources */,
 				6BBC8E7826F1D73200808D55 /* AppDelegate.swift in Sources */,
 				6BBC8E9826F1DA0100808D55 /* BaseView.swift in Sources */,
+				6BBC8EA026F1E23C00808D55 /* MainCoordinator.swift in Sources */,
 				6BBC8E9A26F1DA6900808D55 /* StockListView.swift in Sources */,
 				6BBC8E7A26F1D73200808D55 /* SceneDelegate.swift in Sources */,
 				6BBC8E9426F1D93200808D55 /* BaseViewController.swift in Sources */,
