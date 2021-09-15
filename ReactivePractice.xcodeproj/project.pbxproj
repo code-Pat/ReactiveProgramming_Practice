@@ -20,6 +20,10 @@
 		6BBC8EA026F1E23C00808D55 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E9F26F1E23C00808D55 /* MainCoordinator.swift */; };
 		6BBC8EA226F1E5D000808D55 /* StockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EA126F1E5D000808D55 /* StockRepository.swift */; };
 		6BBC8EA626F1E6F800808D55 /* StockRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EA526F1E6F800808D55 /* StockRepositoryImpl.swift */; };
+		6BBC8EA826F1FC9200808D55 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EA726F1FC9200808D55 /* Stock.swift */; };
+		6BBC8EAA26F1FFFA00808D55 /* StockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EA926F1FFFA00808D55 /* StockUseCase.swift */; };
+		6BBC8EAC26F2009100808D55 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EAB26F2009100808D55 /* StockListViewModel.swift */; };
+		EB743C50640C8FCB5DFA30C3 /* Pods_ReactivePractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC838EE99072E0872B335A9 /* Pods_ReactivePractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,12 @@
 		6BBC8E9F26F1E23C00808D55 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6BBC8EA126F1E5D000808D55 /* StockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepository.swift; sourceTree = "<group>"; };
 		6BBC8EA526F1E6F800808D55 /* StockRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepositoryImpl.swift; sourceTree = "<group>"; };
+		6BBC8EA726F1FC9200808D55 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		6BBC8EA926F1FFFA00808D55 /* StockUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockUseCase.swift; sourceTree = "<group>"; };
+		6BBC8EAB26F2009100808D55 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		6CF41EF65DB2885B8A70EB68 /* Pods-ReactivePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePractice.release.xcconfig"; path = "Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice.release.xcconfig"; sourceTree = "<group>"; };
+		8CC838EE99072E0872B335A9 /* Pods_ReactivePractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DACBE3CB4A8926D87B3670 /* Pods-ReactivePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePractice.debug.xcconfig"; path = "Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB743C50640C8FCB5DFA30C3 /* Pods_ReactivePractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,8 @@
 			children = (
 				6BBC8E7626F1D73200808D55 /* ReactivePractice */,
 				6BBC8E7526F1D73200808D55 /* Products */,
+				BDF75EB73F47754F6F467AD2 /* Pods */,
+				C2D371AFF7EE6698B312131B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +122,7 @@
 			children = (
 				6BBC8E9326F1D93200808D55 /* BaseViewController.swift */,
 				6BBC8E9526F1D9D900808D55 /* StockListController.swift */,
+				6BBC8EAB26F2009100808D55 /* StockListViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +139,7 @@
 		6BBC8E8F26F1D8B800808D55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC8EA726F1FC9200808D55 /* Stock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,8 +164,27 @@
 		6BBC8E9226F1D90700808D55 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC8EA926F1FFFA00808D55 /* StockUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		BDF75EB73F47754F6F467AD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3DACBE3CB4A8926D87B3670 /* Pods-ReactivePractice.debug.xcconfig */,
+				6CF41EF65DB2885B8A70EB68 /* Pods-ReactivePractice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2D371AFF7EE6698B312131B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CC838EE99072E0872B335A9 /* Pods_ReactivePractice.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BBC8E8826F1D73600808D55 /* Build configuration list for PBXNativeTarget "ReactivePractice" */;
 			buildPhases = (
+				A589E9B5B161903ED016C52D /* [CP] Check Pods Manifest.lock */,
 				6BBC8E7026F1D73200808D55 /* Sources */,
 				6BBC8E7126F1D73200808D55 /* Frameworks */,
 				6BBC8E7226F1D73200808D55 /* Resources */,
+				568ED38EEB21C38D7268E232 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,13 +253,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		568ED38EEB21C38D7268E232 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A589E9B5B161903ED016C52D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactivePractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6BBC8E7026F1D73200808D55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6BBC8E9E26F1DCA500808D55 /* CompositionRoot.swift in Sources */,
+				6BBC8EAC26F2009100808D55 /* StockListViewModel.swift in Sources */,
 				6BBC8E9626F1D9D900808D55 /* StockListController.swift in Sources */,
+				6BBC8EA826F1FC9200808D55 /* Stock.swift in Sources */,
 				6BBC8E7826F1D73200808D55 /* AppDelegate.swift in Sources */,
 				6BBC8E9826F1DA0100808D55 /* BaseView.swift in Sources */,
 				6BBC8EA226F1E5D000808D55 /* StockRepository.swift in Sources */,
@@ -232,6 +312,7 @@
 				6BBC8E9A26F1DA6900808D55 /* StockListView.swift in Sources */,
 				6BBC8E7A26F1D73200808D55 /* SceneDelegate.swift in Sources */,
 				6BBC8E9426F1D93200808D55 /* BaseViewController.swift in Sources */,
+				6BBC8EAA26F1FFFA00808D55 /* StockUseCase.swift in Sources */,
 				6BBC8E9C26F1DC6A00808D55 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +449,7 @@
 		};
 		6BBC8E8926F1D73600808D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DACBE3CB4A8926D87B3670 /* Pods-ReactivePractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +468,7 @@
 		};
 		6BBC8E8A26F1D73600808D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF41EF65DB2885B8A70EB68 /* Pods-ReactivePractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
