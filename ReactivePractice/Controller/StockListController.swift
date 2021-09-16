@@ -62,8 +62,8 @@ class StockListController: BaseViewController, FactoryModule {
         viewModel.$stocks.sink { stocks in
             print("stocks: \(stocks)")
         }.store(in: &subscriber)
-        viewModel.$loading.sink { loading in
-            print("loading: \(loading)")
+        viewModel.$loading.sink {[unowned self] loading in
+            self.selfView.loadingView.isHidden = !loading
         }.store(in: &subscriber)
     }
 
