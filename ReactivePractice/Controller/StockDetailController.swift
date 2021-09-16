@@ -13,6 +13,8 @@ class StockDetailController: BaseViewController, FactoryModule {
         let stock: Stock
     }
     
+    let selfView = StockDetailView()
+    
     let stock: Stock
     
     required init(dependency: Dependency, payload: ()) {
@@ -24,8 +26,22 @@ class StockDetailController: BaseViewController, FactoryModule {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        enableScrollWhenKeyboardAppeared(scrollView: selfView.scrollView)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        removeListners()
+    }
+    
     override func configureUI() {
         view.backgroundColor = .systemBackground
-        title = "detail"
+        title = "Detail"
+        view.addSubview(selfView)
+        selfView.translatesAutoresizingMaskIntoConstraints = false
+        selfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        selfView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        selfView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        selfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
