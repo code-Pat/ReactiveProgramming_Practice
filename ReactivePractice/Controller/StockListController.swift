@@ -19,7 +19,7 @@ class StockListController: BaseViewController, FactoryModule {
     
     let selfView = StockListView()
     let viewModel: StockListViewModel
-    
+     
     required init(dependency: Dependency, payload: ()) {
         viewModel = dependency.viewModel
         super.init(nibName: nil, bundle: nil)
@@ -34,6 +34,14 @@ class StockListController: BaseViewController, FactoryModule {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        enableScrollWhenKeyboardAppeared(scrollView: selfView.tableView)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        removeListners()
+    }
+    
     override func configureUI() {
         view.addSubview(selfView)
         selfView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,8 +50,8 @@ class StockListController: BaseViewController, FactoryModule {
         selfView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         selfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        selfView.searchViewController.delegate = self
-        selfView.searchViewController.searchResultsUpdater = self
+        selfView.tableView.delegate = self
+        selfView.tableView.dataSource = self
         
         navigationItem.searchController = selfView.searchViewController
     }
@@ -59,8 +67,8 @@ class StockListController: BaseViewController, FactoryModule {
             guard let message = errorMessage, !message.isEmpty else { return }
                 print("error: \(message)")
         }.store(in: &subscriber)
-        viewModel.$stocks.sink { stocks in
-            print("stocks: \(stocks)")
+        viewModel.$stocks.sink {[unowned self] _ in
+            self.selfView.tableView.reloadData()
         }.store(in: &subscriber)
         viewModel.$loading.sink {[unowned self] loading in
             self.selfView.loadingView.isHidden = !loading
