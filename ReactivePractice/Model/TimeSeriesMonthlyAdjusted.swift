@@ -11,6 +11,7 @@ import Foundation
 struct TimeSeriesMonthlyAdjusted: Decodable {
     let meta: Meta
     let series: [String: OHLC]
+    var monthInfos: [MonthInfo] = []
     
     enum CodingKeys: String, CodingKey {
         case meta = "Meta Data"
@@ -37,7 +38,7 @@ struct TimeSeriesMonthlyAdjusted: Decodable {
         }
     }
     
-    func generateMonthInfos() -> [MonthInfo] {
+    mutating func generateMonthInfos() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         var monthInfos: [MonthInfo] = []
@@ -50,7 +51,7 @@ struct TimeSeriesMonthlyAdjusted: Decodable {
                 monthInfos.append(monthInfo)
             }
         }
-        return monthInfos
+        self.monthInfos = monthInfos
     }
     
     private func generateAdjustedOpen(ohlc: OHLC) -> Double? {
