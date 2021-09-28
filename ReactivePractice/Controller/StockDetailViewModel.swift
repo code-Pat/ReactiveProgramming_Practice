@@ -12,7 +12,6 @@ class StockDetailViewModel: BaseViewModel {
     @Published var loading = false
     @Published var errorMessage: String?
     @Published var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
-    @Published var monthInfos: [MonthInfo] = []
     
     let usecase: StockDetailUseCase
     
@@ -26,20 +25,15 @@ class StockDetailViewModel: BaseViewModel {
             case .finished: break
             }
         } receiveValue: { value in
-            self.timeSeriesMonthlyAdjusted = value
+            var timeSeriesMonthlyAdjusted = value
+            timeSeriesMonthlyAdjusted.generateMonthInfos()
+            self.timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted
         }.store(in: &subscriber)
     }
     
     init(usecase: StockDetailUseCase) {
         self.usecase = usecase
         super.init()
-        bind()
     }
-    
-    func bind() {
-        $timeSeriesMonthlyAdjusted.sink { timeSeriesMonthlyAdjusted in
-            guard let timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted else { return }
-            self.monthInfos = timeSeriesMonthlyAdjusted.generateMonthInfos()
-        }.store(in: &subscriber)
-    }
+
 }
