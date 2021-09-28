@@ -18,7 +18,6 @@ class StockDetailController: BaseViewController, FactoryModule {
     
     let selfView = StockDetailView()
     let viewModel: StockDetailViewModel
-    
     let stock: Stock
     
     required init(dependency: Dependency, payload: ()) {
@@ -41,7 +40,7 @@ class StockDetailController: BaseViewController, FactoryModule {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.viewDidLoad(symbol: stock.symbol ?? "")
+        viewModel.viewDidLoad(symbol: stock.symbol ?? "", stock: stock)
         bind()
     }
     
@@ -59,7 +58,12 @@ class StockDetailController: BaseViewController, FactoryModule {
     func bind() {
         viewModel.$timeSeriesMonthlyAdjusted.sink { timeSeriesMonthlyAdjusted in
             guard let timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted else { return }
-            print("timeSeriesMonthlyAdjusted: \(timeSeriesMonthlyAdjusted.monthInfos)")
+            print("timeSeriesMonthlyAdjusted: \(timeSeriesMonthlyAdjusted)")
+        }.store(in: &subscriber)
+        
+        viewModel.$stock.sink { stock in
+            guard let stock = stock else { return }
+            self.selfView.topView.configureUI(stock: stock)
         }.store(in: &subscriber)
         
         viewModel.$errorMessage.sink { errorMessage in
