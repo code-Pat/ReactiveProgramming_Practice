@@ -12,10 +12,12 @@ class StockDetailViewModel: BaseViewModel {
     @Published var loading = false
     @Published var errorMessage: String?
     @Published var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
+    @Published var stock: Stock?
     
     let usecase: StockDetailUseCase
     
-    func viewDidLoad(symbol: String) {
+    func viewDidLoad(symbol: String, stock: Stock) {
+        self.stock = stock
         loading = true
         usecase.fetchTimeSeriesPublisher(keywords: symbol).sink { completion in
             self.loading = false
