@@ -9,11 +9,6 @@ import Foundation
 
 class StockRepositoryImpl: StockRepository {
     
-    enum StockRepositoryError: Error {
-        case encoding
-        case bad_url
-    }
-    
     let apiKey: String = "JSHOR8KXBN10Y5EA"
     let decoder = JSONDecoder()
     
@@ -64,7 +59,7 @@ class StockRepositoryImpl: StockRepository {
         if let url = URL(string: urlString) {
             return .success(url)
         } else {
-            let error: StockRepositoryError = .bad_url
+            let error: MyError = .badUrl
             return .failure(error)
         }
     }
@@ -73,7 +68,7 @@ class StockRepositoryImpl: StockRepository {
         if let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
             return .success(query)
         } else {
-            let error: StockRepositoryError = .encoding
+            let error: MyError = .encoding
             return .failure(error)
         }
     }

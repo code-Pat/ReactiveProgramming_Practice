@@ -32,6 +32,8 @@
 		6BBC8EBA26F325F900808D55 /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EB926F325F900808D55 /* StockDetailView.swift */; };
 		6BBC8EBC26F32F1F00808D55 /* StockDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EBB26F32F1E00808D55 /* StockDetailTopView.swift */; };
 		6BBC8EBE26F3308600808D55 /* StockDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8EBD26F3308600808D55 /* StockDetailBottomView.swift */; };
+		6BF360452702DA0600F0E053 /* StockDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF360442702DA0600F0E053 /* StockDetailViewModel.swift */; };
+		6BF360482702DA6D00F0E053 /* Error+ErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF360472702DA6D00F0E053 /* Error+ErrorDescription.swift */; };
 		6BF7635B270165F700449A97 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF7635A270165F700449A97 /* TimeSeriesMonthlyAdjusted.swift */; };
 		EB743C50640C8FCB5DFA30C3 /* Pods_ReactivePractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC838EE99072E0872B335A9 /* Pods_ReactivePractice.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		6BBC8EB926F325F900808D55 /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 		6BBC8EBB26F32F1E00808D55 /* StockDetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailTopView.swift; sourceTree = "<group>"; };
 		6BBC8EBD26F3308600808D55 /* StockDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailBottomView.swift; sourceTree = "<group>"; };
+		6BF360442702DA0600F0E053 /* StockDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewModel.swift; sourceTree = "<group>"; };
+		6BF360472702DA6D00F0E053 /* Error+ErrorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ErrorDescription.swift"; sourceTree = "<group>"; };
 		6BF7635A270165F700449A97 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		6CF41EF65DB2885B8A70EB68 /* Pods-ReactivePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePractice.release.xcconfig"; path = "Target Support Files/Pods-ReactivePractice/Pods-ReactivePractice.release.xcconfig"; sourceTree = "<group>"; };
 		8CC838EE99072E0872B335A9 /* Pods_ReactivePractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,7 @@
 		6BBC8E7626F1D73200808D55 /* ReactivePractice */ = {
 			isa = PBXGroup;
 			children = (
+				6BF360462702DA5400F0E053 /* Extensions */,
 				6BBC8E9026F1D8BD00808D55 /* Component */,
 				6BBC8E9226F1D90700808D55 /* Domain */,
 				6BBC8E9126F1D8C800808D55 /* Repository */,
@@ -145,6 +150,7 @@
 				6BBC8EAB26F2009100808D55 /* StockListViewModel.swift */,
 				6BBC8EB326F3029F00808D55 /* StockList+TableView.swift */,
 				6BBC8EB726F31E3B00808D55 /* StockDetailController.swift */,
+				6BF360442702DA0600F0E053 /* StockDetailViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				6BBC8EA926F1FFFA00808D55 /* StockUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		6BF360462702DA5400F0E053 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BF360472702DA6D00F0E053 /* Error+ErrorDescription.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BDF75EB73F47754F6F467AD2 /* Pods */ = {
@@ -333,11 +347,13 @@
 				6BBC8E9E26F1DCA500808D55 /* CompositionRoot.swift in Sources */,
 				6BBC8EAC26F2009100808D55 /* StockListViewModel.swift in Sources */,
 				6BBC8E9626F1D9D900808D55 /* StockListController.swift in Sources */,
+				6BF360482702DA6D00F0E053 /* Error+ErrorDescription.swift in Sources */,
 				6BBC8EA826F1FC9200808D55 /* Stock.swift in Sources */,
 				6BBC8EB226F300B800808D55 /* StockCell.swift in Sources */,
 				6BBC8EB826F31E3B00808D55 /* StockDetailController.swift in Sources */,
 				6BBC8EB626F31A5C00808D55 /* EmptyView.swift in Sources */,
 				6BBC8EBA26F325F900808D55 /* StockDetailView.swift in Sources */,
+				6BF360452702DA0600F0E053 /* StockDetailViewModel.swift in Sources */,
 				6BBC8E7826F1D73200808D55 /* AppDelegate.swift in Sources */,
 				6BBC8E9826F1DA0100808D55 /* BaseView.swift in Sources */,
 				6BF7635B270165F700449A97 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
