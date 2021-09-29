@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B41F26527041EE60068A6A6 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41F26427041EE60068A6A6 /* UITextField+Extensions.swift */; };
+		6B41F267270420940068A6A6 /* SelectDateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41F266270420940068A6A6 /* SelectDateController.swift */; };
 		6BBC8E7826F1D73200808D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E7726F1D73200808D55 /* AppDelegate.swift */; };
 		6BBC8E7A26F1D73200808D55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC8E7926F1D73200808D55 /* SceneDelegate.swift */; };
 		6BBC8E8126F1D73600808D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC8E8026F1D73600808D55 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B41F26427041EE60068A6A6 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		6B41F266270420940068A6A6 /* SelectDateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateController.swift; sourceTree = "<group>"; };
 		6BBC8E7426F1D73200808D55 /* ReactivePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactivePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBC8E7726F1D73200808D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BBC8E7926F1D73200808D55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				6BBC8EB726F31E3B00808D55 /* StockDetailController.swift */,
 				6BF360442702DA0600F0E053 /* StockDetailViewModel.swift */,
 				6BF360492702DBB200F0E053 /* BaseViewModel.swift */,
+				6B41F266270420940068A6A6 /* SelectDateController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				6BF360472702DA6D00F0E053 /* Error+ErrorDescription.swift */,
+				6B41F26427041EE60068A6A6 /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				6BBC8EBC26F32F1F00808D55 /* StockDetailTopView.swift in Sources */,
 				6BBC8E9E26F1DCA500808D55 /* CompositionRoot.swift in Sources */,
 				6BBC8EAC26F2009100808D55 /* StockListViewModel.swift in Sources */,
+				6B41F26527041EE60068A6A6 /* UITextField+Extensions.swift in Sources */,
 				6BBC8E9626F1D9D900808D55 /* StockListController.swift in Sources */,
 				6BF360482702DA6D00F0E053 /* Error+ErrorDescription.swift in Sources */,
 				6BF3604A2702DBB200F0E053 /* BaseViewModel.swift in Sources */,
@@ -367,6 +374,7 @@
 				6BBC8E7826F1D73200808D55 /* AppDelegate.swift in Sources */,
 				6BBC8E9826F1DA0100808D55 /* BaseView.swift in Sources */,
 				6BF7635B270165F700449A97 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
+				6B41F267270420940068A6A6 /* SelectDateController.swift in Sources */,
 				6BBC8EA226F1E5D000808D55 /* StockRepository.swift in Sources */,
 				6BBC8EA626F1E6F800808D55 /* StockRepositoryImpl.swift in Sources */,
 				6BBC8EAE26F2FD9A00808D55 /* LoadingView.swift in Sources */,
